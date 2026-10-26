@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yash – AI &amp; ML student</title>
+<meta name="description" content="Portfolio of Yash, first-year B.Tech AI &amp; ML student at KIET, Ghaziabad.">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<header class="bar">
+  <a class="logo" href="#top">Yash<span>.</span></a>
+  <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+  <nav id="nav" aria-label="Sections">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    <button class="theme" id="theme" aria-label="Switch colour theme">◐</button>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <h1><span class="line l1">Hi, I’m</span> <span class="line l2">Yash.</span></h1>
+      <p class="role">I’m a <span id="typed" class="typed"></span><span class="caret" aria-hidden="true"></span></p>
+      <p class="lede">First-year B.Tech student in AI &amp; ML at KIET, Ghaziabad. I’m learning how machines learn, and building small projects to prove it to myself.</p>
+      <div class="btns">
+        <a class="btn primary" href="#projects">See my work</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-lab">
+      <div class="lab">
+        <canvas id="plot" tabindex="0" role="img" aria-label="Interactive plot: a perceptron learns a line separating blue and orange points. Click to add points."></canvas>
+        <div class="ctl">
+          <button id="bA" aria-pressed="true"><span class="dot" style="background:var(--a)"></span>Add blue</button>
+          <button id="bB" aria-pressed="false"><span class="dot" style="background:var(--b)"></span>Add orange</button>
+          <button id="bR">Reset</button>
+          <span class="stat" id="stat" aria-live="polite"></span>
+        </div>
+      </div>
+      <p class="cap">A perceptron, the simplest neural network, retraining itself live. Click the plot to add points. If one line can’t separate them, it keeps trying.</p>
+    </div>
+  </section>
+
+  <section class="sec wrap rv" id="about">
+    <h2>About</h2>
+    <div>
+      <p>I started B.Tech in Artificial Intelligence and Machine Learning to understand what is really happening inside the models everyone talks about. Right now that means maths, Python and a lot of small experiments.</p>
+      <p>I like projects where I can see the result move: a line fitting data, a model improving, a bug finally dying. My goal is to build AI that is useful, and to be able to explain how it works.</p>
+    </div>
+  </section>
+
+  <section class="sec wrap rv" id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <button class="skill" aria-expanded="false"><b>Programming</b><span>Python, C, C++ basics, Git and GitHub</span></button>
+      <button class="skill" aria-expanded="false"><b>Data and ML</b><span>NumPy, Pandas, Matplotlib, scikit-learn (learning)</span></button>
+      <button class="skill" aria-expanded="false"><b>Foundations</b><span>Data structures and algorithms, linear algebra, probability</span></button>
+    </div>
+  </section>
+
+  <section class="sec wrap rv" id="projects">
+    <h2>Projects</h2>
+    <div>
+      <div class="chips" role="group" aria-label="Filter projects">
+        <button class="chip on" data-f="all">All</button>
+        <button class="chip" data-f="python">Python</button>
+        <button class="chip" data-f="web">Web</button>
+      </div>
+      <article class="proj" data-t="python">
+        <h3>Student marks predictor <em>In progress</em></h3>
+        <p>Linear regression built from scratch with NumPy, then compared against scikit-learn to check the maths.</p>
+        <div class="tags">Python, NumPy, Matplotlib · <a href="#">GitHub</a></div>
+      </article>
+      <article class="proj" data-t="python">
+        <h3>Handwritten digit classifier <em>Planned</em></h3>
+        <p>A small neural network trained on MNIST, with notes on what each layer is doing.</p>
+        <div class="tags">Python, scikit-learn · <a href="#">GitHub</a></div>
+      </article>
+      <article class="proj" data-t="web">
+        <h3>This website</h3>
+        <p>A portfolio with a live perceptron on the front page, written in plain HTML, CSS and JavaScript.</p>
+        <div class="tags">HTML, CSS, JavaScript</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec wrap rv" id="learning">
+    <h2>Learning next</h2>
+    <ul class="plain">
+      <li>Gradient descent and backpropagation, by hand before using a library</li>
+      <li>Pandas for cleaning real datasets</li>
+      <li>Competitive programming practice on weekends</li>
+    </ul>
+  </section>
+
+  <section class="sec wrap rv" id="contact">
+    <h2>Contact</h2>
+    <form id="form" novalidate>
+      <label>Name<input id="fn" required autocomplete="name"></label>
+      <label>Email<input id="fe" type="email" required autocomplete="email"></label>
+      <label>Message<textarea id="fm" rows="4" required></textarea></label>
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn primary" type="submit">Send email</button>
+    </form>
+  </section>
+</main>
+
+<footer class="wrap">Yash · B.Tech AI &amp; ML, KIET Ghaziabad</footer>
+<script src="script.js"></script>
+</body>
+</html>
