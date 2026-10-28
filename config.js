@@ -11,7 +11,7 @@
      PROXY_URL and leave GEMINI_API_KEY empty.
 ------------------------------------------------------------------- */
 window.CHATBOT_CONFIG = {
-  GEMINI_API_KEY: 'PASTE_YOUR_GEMINI_API_KEY_HERE',
+  GEMINI_API_KEY: 'AQ.Ab8RN6KtUE926beya6IgGzwQ0ghwvd9iUEZYVSiocv0idRM2Vg',
   MODEL: 'gemini-2.5-flash',   // change here if Google retires this model name
   PROXY_URL: ''                // e.g. 'https://portfolio-chat.yourname.workers.dev'
 };
